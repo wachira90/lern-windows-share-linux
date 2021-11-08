@@ -7,7 +7,7 @@
 ### Debian
 
 ```
-apt install cifs-utils -Y
+apt install cifs-utils -y
 ```
 
 ### Centos
