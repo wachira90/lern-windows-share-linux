@@ -29,7 +29,7 @@ nano /etc/win-credentials
 
 username=adminbemis
 password=****
-domain=BEMIS
+domain=EXAMPLE
 ```
 
 ## PERMISSION CREDENTIAL
