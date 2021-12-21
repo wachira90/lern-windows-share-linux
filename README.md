@@ -46,7 +46,7 @@ usermod -a -G wheel adminbemis
 su - adminbemis 
 ```
 
-## SHOW CURRENT UID AND GID 
+## SHOW CURRENT UID AND GID SWITCH TO USER `adminbemis`
 ```
 id -u 
 
@@ -73,12 +73,10 @@ mount -t cifs -o uid=1004,gid=1004,credentials=/etc/win-credentials,iocharset=ut
 df -h
 ```
 
-## MOUNT ON BOOT
+## MOUNT ON BOOT `/etc/fstab`
 
 ```
 nano /etc/fstab
-
-//172.16.1.130/test-share1  /mnt/win_share  cifs  uid=1003,gid=1003,credentials=/etc/win-credentials,iocharset=utf8,vers=3.0,file_mode=0775,dir_mode=0775,noperm 0 0
 
 //172.16.1.130/test-share1  /mnt/win_share  cifs  uid=1004,gid=1004,credentials=/etc/win-credentials,iocharset=utf8,vers=3.0,file_mode=0775,dir_mode=0775,noperm 0 0
 ```
@@ -87,6 +85,10 @@ nano /etc/fstab
 
 ```
 ls -la /mnt/win_share
+```
+### and
+```
+df -h /mnt/win_share
 ```
 
 ## UNMOUNT 
